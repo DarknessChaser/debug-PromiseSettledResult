@@ -3,9 +3,14 @@
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+
+const handleNoty = (res: PromiseSettledResult<string | undefined>[]) => {
+  console.log(res);
+  return res;
+};
 
 export default defineComponent({
   name: 'App',
